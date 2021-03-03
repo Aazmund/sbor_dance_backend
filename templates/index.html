@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</title>
+    <script src="https://kit.fontawesome.com/0ee0d97279.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style/style.css' %} "/>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/normalize.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/news.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+{#<a id="specialButton" href="#"><img src="https://lidrekon.ru/images/special.png" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" /></a>#}
+{% include 'header.html' %}
+<div class="bg">
+    {% include 'menu.html' %}
+    {% include 'slider.html' %}
+</div>
+{% block content %}
+    {% for post in posts %}
+        <div class="news">
+        <article class="news__block">
+            <h3 class="news__block-title">{{ post.title }}</h3>
+            <p class="news__block-text">{{ post.body }}</p>
+        </article>
+        </div>
+    {% endfor %}
+
+    {% include "pagination.html" with page=posts %}
+{% endblock content %}
+<div class="info">
+    <h2 class="info-title">ИНФОРМАЦИОННЫЕ РЕСУРСЫ</h2>
+    <div class="info__wrap">
+        <a href="#"
+        ><img src="{% static 'img/kompokul.png' %}" alt="#" class="info__wrap-item"
+        /></a>
+        <a href="#"
+        ><img src="{% static 'img/domnartvor.png' %}" alt="#" class="info__wrap-item"
+        /></a>
+        <a href="#"
+        ><img src="{% static 'img/gosrosdom.png' %}" alt="#" class="info__wrap-item"
+        /></a>
+        <a href="#"
+        ><img src="{% static 'img/gosuslugi.png' %}" alt="#" class="info__wrap-item"
+        /></a>
+    </div>
+</div>
+<div class="partner">
+    <h2 class="partner-title">НАШ ПАРТНЕР</h2>
+    <div class="partner-item">
+        <a href="#">
+            <img src="{% static 'img/partners.png' %}" alt="#"/>
+        </a>
+    </div>
+</div>
+{% include 'footer.html' %}
+<script src="{% static 'js/menu.js' %}"></script>
+<link rel="stylesheet" href="{% static 'js/slick/slick.css' %}"/>
+<link rel="stylesheet" href="{% static 'js/slick/slick-theme.css' %}"/>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/slick/slick.min.js' %}"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+{#    #}
+<script>
+		jQuery(function($){
+			$.get("{THEME}/images/sprite.svg", function(data) {
+			  var div = document.createElement("div");
+			  div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+			  document.body.insertBefore(div, document.body.childNodes[0]);
+			});
+		});
+	</script>
+    <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+{#    #}
+</body>
+</html>

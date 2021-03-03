@@ -1,0 +1,32 @@
+{% load static %}
+
+<div class="menu">
+        <nav>
+            <ul class="menu__list">
+                <li>
+                    <a href="{% url 'index' %}">ГЛАВНАЯ СТРАНИЦА</a>
+                </li>
+                <li>
+                    <a href="{% url 'sport' %}">СПОРТ ВЫСШИХ ДОСТИЖЕНИЙ</a>
+                </li>
+                <li>
+                    <a href="{% url 'covid-19' %}">COVID-19</a>
+                </li>
+                <li>
+                    <a>О НАС</a>
+                    <span class="arrow menu-arrow"></span>
+                    <ul class="menu__list-sub">
+                        <li><a href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+                        <li><a href="{% url 'about' %}">О КЛУБЕ</a></li>
+                        <li><a href="{% url 'achievements' %}">ДОСТИЖЕНИЯ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'info' %}">ПРАВОВАЯ ИНФОРМАЦИЯ</a>
+                </li>
+                <li>
+                    <a href="{% url 'appointment' %}">ЗАПИСЬ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>

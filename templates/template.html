@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</title>
+    <script
+            src="https://kit.fontawesome.com/0ee0d97279.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/normalize.css' %}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div class="contacts">
+    <div class="contacts-wrap">
+        <div class="contacts__link">
+            <a href="#"><i class="fab fa-vk vk"></i></a>
+            <a href="#"
+            ><i class="fas fa-phone-alt phone"></i> +7 (81369) 2-33-60</a
+            >
+            <a href="#"
+            ><i class="far fa-envelope envelope"></i> gtc.sbor@gmail.com</a
+            >
+            <a href="#">Проспект Героев, д. 30 / Космонавтов ул., д. 26</a>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <img src="{% static 'img/logo.png' %}" alt="logo" class="header-logo"/>
+    <div class="header__text">
+        <h1 class="header__text-title">ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</h1>
+        <p class="header__text-subtitle">
+            МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ СОСНОВЫЙ БОР, ЛЕНИНГРАДСКАЯ
+            ОБЛАСТЬ
+        </p>
+    </div>
+</header>
+
+<div class="bg">
+    {% include 'menu.html' %}
+</div>
+
+<footer class="footer">
+    <div class="footer-wrap">
+        <div class="footer__column">
+            <h3 class="footer__column-title">ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</h3>
+            <p class="footer__column-info">
+                Адрес: Сосновый Бор, Проспект Героев д. 30а
+            </p>
+            <p class="footer__column-timetable">
+                пн. - пт. с 9:00 до 22:00<br/>
+                обед с 13:00 до 14:00<br/>
+                вс. с 20:00 до 22:00
+            </p>
+        </div>
+        <div class="footer__column">
+            <img
+                    class="footer__column-logo"
+                    src="{% static 'img/logo-footer.png' %}"
+                    alt="logo"
+            />
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__column-title">СВЯЗАТЬСЯ С НАМИ</h3>
+            <p class="footer__column-info">
+                Телефон: +7 (81369) 2-33-60<br/>
+                e-mail: gtc.sbor@gmail.com
+            </p>
+            <div class="footer__column-social">
+                <a href="#"><i class="fab fa-vk vk"></i></a>
+                <a href="#"><i class="far fa-envelope envelope"></i></a>
+                <a href="#"><i class="fas fa-phone-alt phone"></i></a>
+            </div>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__column-title">КАК НАС НАЙТИ?</h3>
+            <div class="footer__column-map">
+                <a href="#"><img src="{% static 'img/yandex.png' %}" alt="#"/></a>
+                <a href="#"><img src="{% static 'img/google.png' %}" alt="#"/></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'js/menu.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
+.covid {
+  max-width: 1440px;
+  margin: 50px auto; }
+  .covid-title {
+    font-family: "EB Garamond", serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500; }
+    @media (max-width: 500px) {
+      .covid-title {
+        font-size: 30px; } }
+    @media (max-width: 400px) {
+      .covid-title {
+        font-size: 20px; } }
+  .covid__box {
+    text-align: center; }
+    .covid__box a:not(:last-child) {
+      margin-right: 10px; }
+    @media (max-width: 500px) {
+      .covid__box img {
+        width: 400px; } }
+    @media (max-width: 400px) {
+      .covid__box img {
+        width: 300px; } }
+
+/*# sourceMappingURL=covid.css.map */

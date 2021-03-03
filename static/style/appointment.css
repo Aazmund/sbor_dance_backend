@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
+.rights {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto 50px;
+  font-family: "EB Garamond", serif; }
+  .rights-title {
+    font-weight: 500;
+    text-align: center;
+    font-size: 40px; }
+    @media (max-width: 400px) {
+      .rights-title {
+        font-size: 30px; } }
+  .rights-subtitle {
+    text-align: center;
+    font-size: 25px; }
+    @media (max-width: 400px) {
+      .rights-subtitle {
+        font-size: 20px; } }
+  .rights-date {
+    font-size: 20px;
+    text-align: right; }
+    @media (max-width: 400px) {
+      .rights-date {
+        font-size: 16px; } }
+  .rights-info {
+    font-size: 20px;
+    text-align: right; }
+    @media (max-width: 400px) {
+      .rights-info {
+        font-size: 16px; } }
+  .rights__list {
+    padding-left: 10px; }
+    .rights__list-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 400; }
+      @media (max-width: 400px) {
+        .rights__list-title {
+          font-size: 25px; } }
+    .rights__list a {
+      text-decoration: none;
+      color: #000;
+      font-size: 20px; }
+      @media (max-width: 400px) {
+        .rights__list a {
+          font-size: 16px; } }
+      .rights__list a:hover {
+        text-decoration: underline; }
+    .rights__list li {
+      margin-bottom: 5px; }
+
+/*# sourceMappingURL=appointment.css.map */

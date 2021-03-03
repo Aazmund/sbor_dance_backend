@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
+.news {
+  max-width: 1400px;
+  margin: 50px auto;
+  padding-bottom: 50px; }
+  @media (max-width: 900px) {
+    .news {
+      padding: 0 20px 50px; } }
+  @media (max-width: 500px) {
+    .news {
+      padding: 0 10px 50px; } }
+  .news__block {
+    border-radius: 7px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 50px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 1em;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    .news__block:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -5px;
+      border-radius: inherit;
+      background: -webkit-gradient(linear, left top, right top, color-stop(19%, #e3007b), color-stop(78%, #ff4fad));
+      background: linear-gradient(90deg, #e3007b 19%, #ff4fad 78%); }
+    .news__block-title {
+      font-family: "EB Garamond", serif;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000;
+      font-size: 30px; }
+    .news__block-text {
+      font-size: 20px;
+      font-family: "EB Garamond", serif; }
+
+.pagination {
+  max-width: 1400px;
+  margin: 0 auto 50px; }
+  .step-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 20px; }
+    @media (max-width: 500px) {
+      .step-links {
+        font-size: 16px; } }
+    .step-links a {
+      text-decoration: none;
+      color: #E3007B;
+      margin-right: 20px; }
+      .step-links a:last-child {
+        margin-right: 0;
+        margin-left: 20px; }
+
+/*# sourceMappingURL=news.css.map */

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+@import 'variable';
+
+.form {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+
+    #label {
+        font-family: $font;
+        display: block;
+        font-size: 30px;
+        color: #E3007B;
+        margin-bottom: 10px;
+    }
+
+    #fio,
+    #number,
+    #mail,
+    #date,
+    #parent,
+    #vk {
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #000;
+        margin-bottom: 50px;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #com {
+        background-color: transparent;
+    }
+
+    .submit {
+        display: block;
+        width: 150px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 5px;
+        color: #E3007B;
+        background-color: transparent;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+}

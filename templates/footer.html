@@ -1,0 +1,78 @@
+{% load static %}
+
+<footer class="footer">
+{#    <div class="footer__form">#}
+{#        <form method="post">#}
+{#        {% csrf_token %}#}
+{#            <div class="wrapper"> // display grid#}
+{##}
+{#                {{ form.as_p }}#}
+{#            </div>#}
+{##}
+{#            <input type="submit"/>#}
+{#    </form>#}
+{#    </div>#}
+{#      <form action="post" class="footer__form">#}
+{#        <div class="footer__form-col">#}
+{#          <label for="fio">ФИО</label>#}
+{#          <input id="fio" type="text" required />#}
+{#          <label for="number">Номер телефона</label>#}
+{#          <input id="number" type="tel" required />#}
+{#          <label for="mail">e-Mail</label>#}
+{#          <input id="mail" type="email" required />#}
+{#        </div>#}
+{#        <div class="footer__form-col">#}
+{#          <label for="date">Дата рождения</label>#}
+{#          <input id="date" type="date" required />#}
+{#          <label for="parent">ФИО родителя / законного представителя</label>#}
+{#          <input id="parent" type="text" />#}
+{#          <label for="vk">Ссылка Вконтакте</label>#}
+{#          <input id="vk" type="text" />#}
+{#        </div>#}
+{#        <div class="footer__form-col">#}
+{#          <label for="com">Комментарий</label>#}
+{#          <textarea name="com" id="com" cols="30" rows="5"></textarea>#}
+{#          <input type="submit" class="submit"></input>#}
+{#        </div>#}
+{#      </form>#}
+      <div class="footer-wrap">
+        <div class="footer__column">
+          <h3 class="footer__column-title">ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</h3>
+          <p class="footer__column-info">
+            Адрес: Сосновый Бор, Проспект Героев д. 30а
+          </p>
+          <p class="footer__column-timetable">
+            пн. - пт. с 9:00 до 22:00<br />
+            обед с 13:00 до 14:00<br />
+            вс. с 20:00 до 22:00
+          </p>
+        </div>
+        <div class="footer__column">
+          <img
+            class="footer__column-logo"
+            src="{% static 'img/logo-footer.png' %}"
+            alt="logo"
+          />
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__column-title">СВЯЗАТЬСЯ С НАМИ</h3>
+          <p class="footer__column-info">
+            Телефон: +7 (81369) 2-33-60<br />
+            e-mail: gtc.sbor@gmail.com
+          </p>
+          <div class="footer__column-social">
+            <a href="#"><i class="fab fa-vk vk"></i></a>
+            <a href="#"><i class="far fa-envelope envelope"></i></a>
+            <a href="#"><i class="fas fa-phone-alt phone"></i></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__column-title">КАК НАС НАЙТИ?</h3>
+          <div class="footer__column-map">
+            <a href="#"><img src="{% static 'img/yandex.png' %}" alt="#" /></a>
+            <a href="#"><img src="{% static 'img/google.png' %}" alt="#" /></a>
+          </div>
+        </div>
+      </div>
+
+    </footer>

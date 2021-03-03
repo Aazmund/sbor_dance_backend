@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+@import 'variable';
+
+.page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 115px;
+
+    &-title {
+        font-size: 60px;
+        font-weight: 500;
+        color: #fff;
+        font-family: $font;
+
+        @media (max-width: 1100px) {
+            text-align: center;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 40px;
+        }
+    }
+
+    &__cols {
+        display: flex;
+
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &-col1 {
+            margin-right: 100px;
+
+            @media (max-width: 900px) {
+                margin-right: 0;
+                text-align: center;
+            }
+
+            p {
+                tab-size: 8;
+                font-family: $font;
+                font-weight: 500;
+                font-size: 25px;
+
+                @media (max-width: 500px) {
+                    font-size: 14px;
+                }
+
+                span {
+                    color: #E3007B;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+
+                .tab {
+                    color: #000;
+                    padding-left: 192px;
+                }
+
+                .mobile {
+                    color: #000;
+
+                    @media (max-width: 500px) {
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+
+        &-col2 {
+            h2 {
+                font-family: $font;
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            img {
+                @media (max-width: 500px) {
+                    width: 400px;
+                }
+
+                @media (max-width: 400px) {
+                    width: 300px;
+                }
+
+            }
+        }
+    }
+}

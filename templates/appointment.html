@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Городцкой танцевальный центр. Запись.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/0ee0d97279.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style/style.css' %} "/>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/normalize.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/form.css' %}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+{% include 'header.html' %}
+<div class="bg">
+    {% include 'menu.html' %}
+</div>
+<form method="post" class = "form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="submit"/>
+</form>
+{% include 'footer.html' %}
+</body>

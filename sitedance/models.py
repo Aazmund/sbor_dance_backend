@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -17,7 +17,7 @@ class Post(models.Model):
     )
     title = models.CharField(max_length=200)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE, )
-    body = models.TextField()
+    body = RichTextField(max_length=10000)
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published')
     objects = models.Manager()

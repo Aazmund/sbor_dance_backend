@@ -26,7 +26,7 @@
         <div class="news">
         <article class="news__block">
             <h3 class="news__block-title">{{ post.title }}</h3>
-            <p class="news__block-text">{{ post.body }}</p>
+            <p class="news__block-text">{{ post.body | safe }}</p>
         </article>
         </div>
     {% endfor %}

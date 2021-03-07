@@ -9,7 +9,7 @@ from sitedance.models import Post
 
 def index_view(request):
     object_list = Post.published.get_queryset()
-    paginator = Paginator(object_list, 10)  # 3 поста на каждой странице
+    paginator = Paginator(object_list, 3)  # 3 поста на каждой странице
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)

@@ -23,12 +23,12 @@ from sbor_dance import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sitedance.urls'))
-]
+    path('', include('sitedance.urls')),
+    path('ckeditor', include('ckeditor_uploader.urls')),
+] + static(settings.MEDIA_ROOT, document_root=settings.MEDIA_ROOT)
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+if settings.DEBUG is False:
+    urlpatterns += [url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }), ]
 
 # if settings.DEBUG:
 #     urlpatterns += [

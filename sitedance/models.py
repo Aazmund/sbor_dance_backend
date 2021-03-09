@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
-
+from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 
@@ -15,11 +15,11 @@ class Post(models.Model):
         ('published', 'Published'),
         ('draft', 'Draft'),
     )
-    title = models.CharField(max_length=200)
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, )
-    body = RichTextField(max_length=10000)
-    publish = models.DateTimeField(default=timezone.now)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published')
+    title = models.CharField(max_length=200, verbose_name="Заголовок новости")
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name="Автор")
+    body = RichTextUploadingField(max_length=10000, verbose_name="Содержимое")
+    publish = models.DateTimeField(default=timezone.now, verbose_name="Дата публикации")
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='published', verbose_name="Статус")
     objects = models.Manager()
     published = PublishedManager()
 
@@ -27,6 +27,8 @@ class Post(models.Model):
         return self.title
 
     class Meta:
+        verbose_name = "Публикация"
+        verbose_name_plural = "Публикации"
         ordering = ('-publish',)
 
 

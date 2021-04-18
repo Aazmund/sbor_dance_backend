@@ -46,16 +46,33 @@
             padding-bottom: 20px;
             border-bottom: 1px solid #000;
             font-size: 30px;
+
+            &-top {
+                font-family: $font;
+                padding-bottom: 20px;
+                border-top: 1px solid #000;
+                font-size: 30px;
+            }
         }
 
         &-text {
             font-size: 20px;
             font-family: $font;
         }
+
+        img {
+            max-width: 700px;
+            display: block;
+            margin: 30px auto 0;
+
+            @media(max-width: 375px) {
+                width: 210px;
+            }
+        }
     }
 }
 
-.pagination {
+.paginator {
     max-width: 1400px;
     margin: 0 auto 50px;
 

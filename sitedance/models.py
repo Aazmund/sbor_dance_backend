@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+
+
 # Create your models here.
 
 
@@ -32,8 +34,14 @@ class Post(models.Model):
         ordering = ('-publish',)
 
 
-class MyClass(models.Model):
-    userId = models.CharField(max_length=20)
-    personType = (
-        ()
-    )
+class SportPost(models.Model):
+    title = models.CharField(max_length=500, verbose_name="Заголовок")
+    body = RichTextUploadingField(max_length=10000, verbose_name="Содержимое")
+    year_publish = models.CharField(max_length=10, verbose_name="Год события")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Достижение"
+        verbose_name_plural = "Достижения"

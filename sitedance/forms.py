@@ -8,7 +8,7 @@ class AppointmentForm(forms.Form):
     mail = forms.CharField(max_length=100, label='E-mail *')
     date = forms.CharField(max_length=100, label='Дата рождения *')
     parent_name = forms.CharField(max_length=100, label='Имя родителя/представителя *')
-    vk_link = forms.CharField(max_length=100, label='ссылка на ВКонтакте', required='')
+    vk_link = forms.CharField(max_length=100, label='Ссылка на ВКонтакте', required='')
     comment = forms.CharField(widget=forms.Textarea, required='', label='Комментарий ')
 
     def __init__(self, *args, **kwargs):

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
 .form {
+  position: relative;
+  z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
   text-align: center; }

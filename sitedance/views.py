@@ -1,12 +1,14 @@
 from itertools import groupby
 
+from django.core.mail import send_mail, BadHeaderError
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 
 # Create your views here.
+from django.urls import reverse
 from django.views.generic import ListView
-
 from sitedance.forms import AppointmentForm
 from sitedance.models import Post, SportPost
 
@@ -72,7 +74,7 @@ def covid_view(request):
 
 
 def contacts_view(request):
-    return render(request, 'template.html')
+    return render(request, 'contacts.html')
 
 
 def about_view(request):
@@ -84,9 +86,26 @@ def achievements_view(request):
 
 
 def info_view(request):
-    return render(request, 'template.html')
+    return render(request, 'info.html')
 
 
 def appointment_view(request):
+    if request.method == "POST":
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            try:
+                message = ''
+                message += 'ФИО: ' + form.cleaned_data['name'] + '\n'
+                message += 'Номер ' + form.cleaned_data['number'] + '\n'
+                message += 'Почта ' + form.cleaned_data['mail'] + '\n'
+                message += 'Дата рождения ' + form.cleaned_data['date'] + '\n'
+                message += 'Имя родителя/представителя ' + form.cleaned_data['parent_name'] + '\n'
+                message += 'Ссылка на ВКонтакте ' + form.cleaned_data['vk_link'] + '\n'
+                message += 'Комментарий ' + form.cleaned_data['comment'] + '\n'
+                send_mail('Заявка на запись', message,
+                          'gtc-sbor@yandex.ru', ['gtc-sbor@yandex.ru'], fail_silently=False)
+            except BadHeaderError:
+                return HttpResponseRedirect(reverse('/'))
+            return HttpResponseRedirect(reverse('appointment'))
     form = AppointmentForm()
     return render(request, 'appointment.html', {'form': form})

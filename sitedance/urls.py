@@ -11,5 +11,4 @@ urlpatterns = [
     path('achievements', views.achievements_view, name='achievements'),
     path('info', views.info_view, name='info'),
     path('appointment', views.appointment_view, name='appointment'),
-    path('sport/filter', views.SportListView.as_view, name='sport-filter'),
 ]

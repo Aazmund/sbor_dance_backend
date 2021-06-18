@@ -29,8 +29,8 @@
             <p class="news__block-text">{{ post.body | safe }}</p>
         </article>
         </div>
+//мы можем на js сделать скрипт который отключт модификатор style внутри img?
     {% endfor %}
-
     {% include "pagination.html" with page=posts %}
 {% endblock content %}
 <div class="info">

@@ -57,4 +57,42 @@
       .page__cols-col2 img {
         width: 300px; } }
 
+.people {
+  max-width: 1400px;
+  margin: 0 auto; }
+  .people-title {
+    text-align: center;
+    font-family: "EB Garamond", serif;
+    font-size: 30px; }
+  .people__box {
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    @media (max-width: 1000px) {
+      .people__box {
+        justify-content: space-around; } }
+    .people__box-line {
+      margin-bottom: 100px;
+      width: inherit;
+      display: flex;
+      gap: 50px; }
+      @media (max-width: 1000px) {
+        .people__box-line {
+          display: block; } }
+      .people__box-line-person {
+        max-height: 500px; }
+        @media (max-width: 1000px) {
+          .people__box-line-person {
+            min-height: 550px; } }
+        .people__box-line-person img {
+          max-width: 250px;
+          height: 375px;
+          margin-bottom: 10px; }
+        .people__box-line-person p {
+          width: 250px;
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0; }
+
 /*# sourceMappingURL=contacts.css.map */

@@ -19,10 +19,34 @@
             href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap"
             rel="stylesheet"
     />
-    <link rel="stylesheet" href=""/>
 </head>
 <body>
+<script>
+    function listener(param) {
+        let string = '';
+        let sub_str =' ';
 
+        {% for sportpost in sportpost_list %}
+            if({{ sportpost.year_publish }} == param){
+                {#let str = `{{ sportpost.body }}`;#}
+                {#alert(str);#}
+                string += `<div class="news">`;
+                string += `<article class="news__block">`;
+                sub_str = `{{ sportpost.title }}`;
+                sub_str = sub_str.replace('<p>', '');
+                sub_str = sub_str.replace('</p>', '');
+                string += `<h3 class="news__block-title">` + sub_str + `</h3>`;
+                sub_str = `{{ sportpost.body | safe }}`;
+                sub_str = sub_str.replace('<p>', '');
+                sub_str = sub_str.replace('</p>', '');
+                string += `<p class="news__block-text">` + sub_str + `</p>`;
+                string += `</article> </div>`;
+        }
+        {% endfor %}
+        document.getElementById("content").innerHTML = string;
+}
+
+</script>
 {% include 'header.html' %}
 
 <div class="bg">
@@ -32,13 +56,13 @@
 <div class="info">
     <h2 class="info-title">ДОСТИЖЕНИЯ ПО ГОДАМ</h2>
 </div>
-<div class="news">
-    <article class="news__block">
-        <h3 class="news__block-title">Хромченко Лариса Ивановна</h3>
-        <p class="news__block-text">Заслуженный работник культуры, тренер высшей категории</p>
-        <img src="{% static 'img/khromchenko.jpg' %}" alt="Хромченко Лариса Ивановна">
-    </article>
-</div>
+{#<div class="news">#}
+{#    <article class="news__block">#}
+{#        <h3 class="news__block-title">Хромченко Лариса Ивановна</h3>#}
+{#        <p class="news__block-text">Заслуженный работник культуры, тренер высшей категории</p>#}
+{#        <img src="{% static 'img/khromchenko.jpg' %}" alt="Хромченко Лариса Ивановна">#}
+{#    </article>#}
+{#</div>#}
 <div class="filter-nav">
     {% for var in vars %}
         <button id="{{ var }}" onclick="listener({{ var }})">{{ var }}</button>
@@ -49,27 +73,15 @@
 
 </div>
 {% include 'footer.html' %}
+
 {#    #}
 <script src="{% static 'js/jquery.js' %}"></script>
-<script>
-    function listener(param) {
-        let string = '';
-        {% for sportpost in sportpost_list %}
-            if ({{ sportpost.year_publish }} == param){
-            string += '<div class="news">';
-            string += '<article class="news__block">';
-            string += '<h3 class="news__block-title">' + "{{ sportpost.title }}" + '</h3>' + '<p class="news__block-text">' + "{{ sportpost.body | safe }}" + '</p>';
-            string += '</article> </div>';
-        }
-        {% endfor %}
-        document.getElementById("content").innerHTML = string;
-    }
-</script>
+
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
     jQuery(function ($) {
         $.get("{THEME}/images/sprite.svg", function (data) {
-            var div = document.createElement("div");
+            let div = document.createElement("div");
             div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
             document.body.insertBefore(div, document.body.childNodes[0]);
         });

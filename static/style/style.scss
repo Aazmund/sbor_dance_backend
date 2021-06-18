@@ -159,8 +159,6 @@
 }
 
 .bg {
-    position: relative;
-    z-index: 1;
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(250, 78, 170, 0.2) 10%, rgba(255, 0, 138, 0.2) 51%, rgba(250, 78, 170, 0.2) 90%, rgba(255, 255, 255, 1) 100%);
 }
@@ -169,7 +167,6 @@
     padding-top: 10px;
     max-width: 1400px;
     margin: 0 auto;
-    z-index: 999;
 
     a {
         font-family: $font;
@@ -365,6 +362,7 @@
 
 .filter-nav {
     max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -473,5 +471,14 @@ body.touch .arrow {
 
 
 
+    }
+}
+
+.pagination {
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: #E3007B;
     }
 }

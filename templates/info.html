@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</title>
+    <script
+            src="https://kit.fontawesome.com/0ee0d97279.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/normalize.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/news.css' %}">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div class="contacts">
+    <div class="contacts-wrap">
+        <div class="contacts__link">
+            <a href="#"><i class="fab fa-vk vk"></i></a>
+            <a href="#"
+            ><i class="fas fa-phone-alt phone"></i> +7 (81369) 2-33-60</a
+            >
+            <a href="#"
+            ><i class="far fa-envelope envelope"></i> gtc.sbor@gmail.com</a
+            >
+            <a href="#">Проспект Героев, д. 30 / Космонавтов ул., д. 26</a>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <img src="{% static 'img/logo.png' %}" alt="logo" class="header-logo"/>
+    <div class="header__text">
+        <h1 class="header__text-title">ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</h1>
+        <p class="header__text-subtitle">
+            МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ СОСНОВЫЙ БОР, ЛЕНИНГРАДСКАЯ
+            ОБЛАСТЬ
+        </p>
+    </div>
+</header>
+
+<div class="bg">
+    {% include 'menu.html' %}
+</div>
+
+<div class="news">
+    <article class="news__block">
+        <p class="news__block-title-top">Правовая информация</p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/d/g4Mjmq54fq45Yg?w=1">Проверки МАУК ГТЦ</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/TPQ7AJ-lXG9ZuA">Отчет о результатах</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/-jJcVVTkmOKoCQ">Баланс 2021</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/W6xLuysTcZx5GQ">Отчет ПФХД 2021 (1)</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/L07_nZOqhkFMCg">Отчет ПФХД 2021 (2)</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/NPVzCX7zF57uHg">Отчет ПФХД 2021 (3)</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/vMNIIHJeo8T-cw">Постановление № 2891 от 20.12.2017г. Об установлении прейскуранта на платные услуги</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/C2H6sw2dQXIL2A">Договор на оказание платных услуг для детей</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/uZffgaByjmslww">Договор на оказание платных услуг для участников старше 18 лет</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/t_3IUvOh4swr8A">Ежегодный отчет 2020 о деятельности МАУК ГТЦ</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/a_LSzqO9QImZ8g">Ежегодный отчет 2020 об использовании имущества</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/IL8f4Lc2bq_tdw">Ежегодный отчет о деятельности МАУК ГТЦ за 2020 год.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/4vGBW--1u1KBHA">Ежегодный отчёт об использовании имущества, закрепленного за МАУК ГТЦ за 2020 г.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/w59QwFqbsdHkyA">Организационная структура</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/biVVPPhu4gZ-bg">Отчет о выполнении муниципального задания за 2020 год.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/8zsFpugK3j2wxw">ПФХД 2020 30.12.2020</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/cdpZSvgr3VPJXQ">ПФХД 2021.2 22.03.2021</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/10GI49495oz11Q">Перечень мероприятий по улучшению условий труда работников СОУТ 2019.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/J16VAtl8oJ-skA">План финансово-хозяйственной деятельности на 2021 год.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/ai67KCQXr3Nnpw">Политика обработки персональных данных МАУК ГТЦ.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/bBVG-JTfRkRGZA">Постановление 1614 об изменении типа учреждения</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/XVHUbvpwa6bWaA">Постановление 513 19.03.2021 повышение тарифов</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/Vd0IKR9seRBEmg">Постановление 541 22.03.2021 повышение тарифов</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/I-I47efPBBD7Pw">Постановление об изменении состава наблюдательного совета</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/Kqizd8VKJZU3eA">Постановление об утверждении наблюдательного совета</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/TSqvsniZ-kOtMQ">Постановление учредителя о приведении кадровых документов директора в соответствие с учредительными документами.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/peyrqZXWIPM7bQ">Постановление учредителя о создании учреждения</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/XxPOJrMaAMuHdQ">Постановление № 1575 от 23.07.2019г. Об установлении прейскуранта на платные услуги</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/t-Th7W62x5dGOg">Постановление № 1630 от 12.07.2018г.Об утверждении состава Наблюдательного совета МАУК ГТЦ</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/xUpiTmfcK-EkaQ">Постановление № 2500 от 08.11.2016г О внесении изменений в состав наблюдательного совета ГТЦ</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/1vmFLiL3V2_9eg">Приказ о переводе ГТЦ на самостоятельный баланс 28.03.2000 г.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/wuCtFpC_PleAqQ">Протокол №7 от 10.07.2017г.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/F4GUrIGsrLN1Fg">Протокол №8 от 30.08.2017г.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/KlxwInczWoythw">РЕШЕНИЕ Совета депутатов МО СГО № 72 от 22.04.2008г. Об установлении льготных категорий детей, которым предоставлено право на полное либо частичное освобождение от оплаты за обучение в муниципальных учреждениях</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/0p1BIG3sVoBR0w">Сведения о среднемесячной заработной плате руководителя, заместителя, и главного бухгалтера МАУК ГТЦ Сосновоборского городского округа за 2019 год</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/hMqZ0dS_LUDUXg">Сведения по исполнению муниципального задания за 2020 год.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/74jkre7TEJyw7w">Свидетельство о внесении записи в ЕГРЮЛ от 20.12.2002</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/f_UK9hI0M-kO5A">Свидетельство о внесении изменений в ЕГРЮЛ в связи с переименованием.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/v20Ymbh4-QdVlA">Свидетельство о постановке на учет в налоговом органе от 16.04.2000</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/4zvoDX4coU_ENw">Свидетельство регистрационной палаты о гос. регистрации</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/AO7hgq5uZYmsFg">Сводная ведомость результатов проведения СОУТ 2019.</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/G8Sbcpl9rYxAiQ">Состав наблюдательного совета</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/lEqA3Fpfd6_W1Q">УСТАВ МАУК ГТЦ 25.04.2019</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/YS6deKeEH8pTbQ">Приказ о назначении директора</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/ZnRL8Bflm5m4pw">Св-во о гос.регистрации</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/UenyWfasiQf7Sw">Информация о хостинге</a></p>
+        <p class="news__block-text"><a href="https://disk.yandex.ru/i/NClET7iM0DFtgw">Чек на оплату</a></p>
+
+    </article>
+</div>
+
+<footer class="footer">
+    <div class="footer-wrap">
+        <div class="footer__column">
+            <h3 class="footer__column-title">ГОРОДСКОЙ ТАНЦЕВАЛЬНЫЙ ЦЕНТР</h3>
+            <p class="footer__column-info">
+                Адрес: Сосновый Бор, Проспект Героев д. 30а
+            </p>
+            <p class="footer__column-timetable">
+                пн. - пт. с 9:00 до 22:00<br/>
+                обед с 13:00 до 14:00<br/>
+                вс. с 20:00 до 22:00
+            </p>
+        </div>
+        <div class="footer__column">
+            <img
+                    class="footer__column-logo"
+                    src="{% static 'img/logo-footer.png' %}"
+                    alt="logo"
+            />
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__column-title">СВЯЗАТЬСЯ С НАМИ</h3>
+            <p class="footer__column-info">
+                Телефон: +7 (81369) 2-33-60<br/>
+                e-mail: gtc.sbor@gmail.com
+            </p>
+            <div class="footer__column-social">
+                <a href="#"><i class="fab fa-vk vk"></i></a>
+                <a href="#"><i class="far fa-envelope envelope"></i></a>
+                <a href="#"><i class="fas fa-phone-alt phone"></i></a>
+            </div>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__column-title">КАК НАС НАЙТИ?</h3>
+            <div class="footer__column-map">
+                <a href="#"><img src="{% static 'img/yandex.png' %}" alt="#"/></a>
+                <a href="#"><img src="{% static 'img/google.png' %}" alt="#"/></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'js/menu.js' %}"></script>
+</body>
+</html>

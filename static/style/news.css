@@ -9,6 +9,12 @@
   @media (max-width: 500px) {
     .news {
       padding: 0 10px 50px; } }
+
+  .news__block a{
+    text-decoration: none;
+    color: #E3007B;
+  }
+
   .news__block {
     border-radius: 7px;
     background-color: #fff;
@@ -48,12 +54,12 @@
     .news__block-text {
       font-size: 20px;
       font-family: "EB Garamond", serif; }
-    .news__block img {
+    .news__block-text img {
       max-width: 700px;
       display: block;
       margin: 30px auto 0; }
       @media (max-width: 375px) {
-        .news__block img {
+        .news__block-text img {
           width: 210px; } }
 
 .paginator {

@@ -58,9 +58,8 @@
         &-text {
             font-size: 20px;
             font-family: $font;
-        }
 
-        img {
+            img {
             max-width: 700px;
             display: block;
             margin: 30px auto 0;
@@ -68,7 +67,10 @@
             @media(max-width: 375px) {
                 width: 210px;
             }
+            }
         }
+
+
     }
 }
 
